@@ -2,6 +2,7 @@
 SMB215-16 E-Auction
 
 Dr. Pascal,
+
 En supposant une idée pour le projet smb215
 Matière: Réseaux et systèmes répartis(2)
 
