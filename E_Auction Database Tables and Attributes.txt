@@ -1,0 +1,151 @@
+Category 
+2 	• Id 
+3 	• Name 
+4 	• ParentId * 
+5 
+ 
+6 
+ 
+7 BarcodeType 
+8 	• Id 
+9 	• Name 
+10 
+ 
+11 
+ 
+12 Package 
+13 	• Id 
+14 	• Name 
+15 	• ItemId * 
+16 	• Quantity 
+17 	• (3elbe kbire fiha 3elab) 
+18 
+ 
+19 (cost - price) 
+20 
+ 
+21 
+ 
+22 Item 
+23 	• Id 
+24 	• Code (nvarchar) 
+25 	• Description 
+26 	• BrandId *  
+27 	• CatId * 
+28 	• Name 
+29 	• TypeId * (ex: liquide, solid, gaz, …) 
+30 	• MakeId * (ex: made in china) 
+31 	• ItemSizeId * 
+32 
+ 
+33 	• Picture 
+34 	• CatalogPath (eza bado ya3mel catalog: kif brakeb ot3a kahrabe2iye masalan) 
+35 	• Barcode (to check if all barcode types has the same charset&type, if not create a table for barcode) 
+36 	• BarcodeTypeId 
+37 	• Color (comma separated hexadecimal) 
+38 	 
+39 	• CreatedBy* 
+40 	• UpdatedBy* 
+41 	• DeletedBy* 
+42 	• CreatedDate 
+43 	• UpdatedDate 
+44 	• DeletedDate 
+45 
+ 
+46 	• IsDeleted 
+47 	• QuantityInCurrentStock (trigger) 
+48 
+ 
+49 	• Vat 
+50 	• ApplyVat 
+51 	• areaId * (wen 7atina be salet l 3ared) 
+52 
+ 
+53 (cost - price) 
+54 
+ 
+55 
+ 
+56 ItemSize 
+57 	• Id 
+58 	• Height (??????) 
+59 	• HeightUnitId 
+60 	• Length (???) 
+61 	• LengthUnitId 
+62 	• Width (???) 
+63 	• WidthUnitId 
+64 	• Weight 
+65 
+ 
+66 
+ 
+67 Stock 
+68 	• Id 
+69 	• ItemId * 
+70 	• BranchId * 
+71 
+ 
+72 	• MinPrice 
+73 	• MidPrice 
+74 	• MaxPrice 
+75 	• UnitCost 
+76 	• AverageUnitCost 
+77 
+ 
+78 
+ 
+79 Offre 
+80 	• Id 
+81 	• Code 
+82 	• Description 
+83 	• From 
+84 	• To 
+85 
+ 
+86 
+ 
+87 OffreRequirement 
+88 	• Id 
+89 	• ItemId * 
+90 	• Quantity 
+91 	• UnitId * 
+92 	• OffreId 
+93 
+ 
+94 
+ 
+95 OffreResult 
+96 	• Id 
+97 	• ItemId * 
+98 	• Quantity 
+99 	• UnitId * 
+100 	• OffreId 
+101 
+ 
+102 
+ 
+103 Transaction 
+104 	• Id 
+105 	• Number 
+106 	• Description 
+107 	• AccountId (seller or purchaser) 
+108 	• BranchId * 
+109 	• Date 
+110 	• CreatedDate 
+111 	• UpdatedDate 
+112 	• CreatedBy 
+113 	• UpdatedBy 
+114 	• InOut 
+115 
+ 
+116 
+ 
+117 TransactionDetails 
+118 	• Id 
+119 	• ItemId * 
+120 	• ProductionDate (????? ?????) 
+121 	• ExpiryDate 
+122 	• BranchId * 
+123 	• InOut 
+124 
+ 
