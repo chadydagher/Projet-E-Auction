@@ -1,0 +1,89 @@
+Admin 
+	• name
+	• pass
+
+
+Auction
+ 	• a_id * 
+        • c_loginname *
+        • i_id *
+        • start_price
+        • start_time
+        • end_time
+        • highest_bid
+        • a_status
+   
+     
+Bids
+        • b_id * 
+        • c_loginname * 
+        • i_id *
+        • b_amount
+        • b_timedate
+  
+     
+Category
+        • category_id * 
+        • category_name
+        • hyperlink
+
+
+Complaint
+ 	• co_id * 
+        • firstname
+        • lastname
+        • co_title
+        • co_description
+        • co_date
+
+
+Customer
+ 	• c_loginname * 
+        • c_password
+        • c_firstname
+        • c_lastname
+        • c_address
+        • c_city
+        • c_email
+        • c_zip
+        • c_phone
+
+
+Faq
+ 	• faq_id 
+        • faq_date
+        • faq_question
+        • faq_answer
+
+
+Item
+ 	• i_id * 
+        • i_title
+        • i_description
+        • category_id *
+        • img
+        • type
+        • location
+
+
+Prepaid_Cards
+
+ 	• pr_id * 
+        • pr_amount
+        • pr_balance
+        • c_loginname
+
+Shipping
+
+        • s_id *
+        • i_id *
+        • s_description
+        • s_from
+        • s_to
+        • s_dateandtime
+        • category_id *
+
+Watchlist
+
+        • i_id *
+        • c_loginname *
